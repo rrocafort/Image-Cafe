@@ -10,13 +10,18 @@ $('#fetch').on('click',function(){
         success: function(data){
            $.each(data.data,function(index,value){
             //console.log(data);
-            let gifTitle = data.data[index].title
-            console.log(gifTitle)
+            //let gifTitle = data.data[index].title
+            //console.log(gifTitle)
           
 
-            //console.log(index,value);
+            console.log(value);
+            console.log(value.title)
+            console.log(value.url)
+
            })
 
+        }, error:function() {
+            console.log("We could not find it")
         }
     })
     
